@@ -1,0 +1,612 @@
+
+/* ==========================================
+   NEXOORA — IDENTIDADE VISUAL
+========================================== */
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text: #172338;
+  --muted: #64748b;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.nexoora {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  overflow-x: clip;
+}
+
+.nexoora *,
+.nexoora *::before,
+.nexoora *::after {
+  box-sizing: border-box;
+}
+
+.nexoora h1,
+.nexoora h2,
+.nexoora h3,
+.nexoora p {
+  text-align: left;
+}
+
+.nexoora a {
+  text-decoration: none;
+}
+
+.nexoora section {
+  scroll-margin-top: 30px;
+}
+
+.nexoora .secao-etiqueta {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.nexoora header {
+  min-height: 88px;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.nexoora header h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.nexoora nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.nexoora nav a {
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nexoora nav a:hover {
+  color: var(--primary);
+}
+
+/* ==========================================
+   APRESENTAÇÃO INICIAL
+========================================== */
+
+.nexoora main {
+  min-height: min(760px, calc(100vh - 88px));
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  background: var(--background);
+}
+
+.nexoora main section {
+  width: 100%;
+  max-width: 820px;
+}
+
+.nexoora main section > p:first-child {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.nexoora main h2 {
+  color: var(--text);
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin: 0 0 26px;
+}
+
+.nexoora main section > p:not(:first-child) {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.nexoora main section > a,
+.nexoora .sobre-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nexoora main section > a {
+  margin-top: 24px;
+}
+
+.nexoora main section > a:hover,
+.nexoora .sobre-botao:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SERVIÇOS
+========================================== */
+
+.nexoora .servicos {
+  width: 100%;
+  padding: 110px 8%;
+  background: var(--surface);
+}
+
+.nexoora .servicos-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nexoora .servicos h2 {
+  color: var(--text);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  margin: 18px 0;
+}
+
+.nexoora .servicos-descricao {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.nexoora .servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.nexoora .servico-card {
+  min-width: 0;
+  padding: 34px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nexoora .servico-card:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+}
+
+.nexoora .servico-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 26px;
+  background: #e8efff;
+  color: var(--primary);
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.nexoora .servico-card h3 {
+  color: var(--text);
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+.nexoora .servico-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==========================================
+   SOBRE NÓS
+========================================== */
+
+.nexoora .sobre {
+  padding: 110px 8%;
+  background: #f1f5f9;
+}
+
+.nexoora .sobre-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.nexoora .sobre-conteudo h2 {
+  color: var(--text);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin: 20px 0 28px;
+}
+
+.nexoora .sobre-conteudo > p:not(.secao-etiqueta) {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.nexoora .sobre-botao {
+  margin-top: 25px;
+}
+
+.nexoora .sobre-diferenciais {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nexoora .sobre-diferenciais article {
+  background: var(--surface);
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.nexoora .sobre-diferenciais span {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.nexoora .sobre-diferenciais h3 {
+  color: var(--text);
+  font-size: 19px;
+  margin: 12px 0;
+}
+
+.nexoora .sobre-diferenciais p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================
+   CONTATO
+========================================== */
+
+.nexoora .contato {
+  width: 100%;
+  padding: 110px 8%;
+  background: var(--surface);
+}
+
+.nexoora .contato-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 70px;
+  align-items: start;
+}
+
+.nexoora .contato-info h2 {
+  color: var(--text);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 20px 0 28px;
+}
+
+.nexoora .contato-info > p:not(.secao-etiqueta) {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.nexoora .contato-detalhe {
+  margin-top: 45px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.nexoora .contato-detalhe span {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nexoora .contato-detalhe p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Formulário */
+
+.nexoora .contato-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  padding: 36px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.nexoora .contato-formulario h3 {
+  color: var(--text);
+  font-size: 23px;
+  margin: 0 0 18px;
+}
+
+.nexoora .contato-formulario label {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.nexoora .contato-formulario input,
+.nexoora .contato-formulario select,
+.nexoora .contato-formulario textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  background: white;
+  color: var(--text);
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease;
+}
+
+.nexoora .contato-formulario textarea {
+  resize: vertical;
+}
+
+.nexoora .contato-formulario input:focus,
+.nexoora .contato-formulario select:focus,
+.nexoora .contato-formulario textarea:focus {
+  outline: 2px solid #bfdbfe;
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.nexoora .contato-formulario button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nexoora .contato-formulario button:hover {
+  background: var(--primary-hover);
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 900px) {
+  .nexoora .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nexoora .sobre-container,
+  .nexoora .contato-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nexoora .servicos,
+  .nexoora .sobre,
+  .nexoora .contato {
+    padding: 80px 6%;
+  }
+
+  .nexoora .contato-formulario {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nexoora header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 6%;
+  }
+
+  .nexoora nav {
+    justify-content: center;
+    gap: 14px 20px;
+  }
+
+  .nexoora nav a {
+    font-size: 14px;
+  }
+
+  .nexoora main {
+    min-height: 600px;
+    padding: 80px 6%;
+  }
+
+  .nexoora main h2 {
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: -1.5px;
+  }
+
+  .nexoora main section > p:not(:first-child) {
+    font-size: 16px;
+  }
+
+  .nexoora .servico-card {
+    padding: 26px;
+  }
+
+  .nexoora .contato-formulario {
+    padding: 22px;
+  }
+
+  .nexoora .servicos,
+  .nexoora .sobre,
+  .nexoora .contato {
+    padding: 65px 6%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexoora *,
+  .nexoora *::before,
+  .nexoora *::after {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* ==========================================
+   RODAPÉ INSTITUCIONAL
+========================================== */
+
+.nexoora .rodape {
+  background: #111c30;
+  color: #ffffff;
+  padding: 80px 8% 25px;
+}
+
+.nexoora .rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 70px;
+}
+
+.nexoora .rodape-marca h2 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+}
+
+.nexoora .rodape-marca p {
+  max-width: 340px;
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.nexoora .rodape-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nexoora .rodape-links h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.nexoora .rodape-links a {
+  color: #94a3b8;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nexoora .rodape-links a:hover {
+  color: #ffffff;
+}
+
+.nexoora .rodape-inferior {
+  max-width: 1200px;
+  margin: 65px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nexoora .rodape-inferior p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .nexoora .rodape {
+    padding: 65px 6% 25px;
+  }
+
+  .nexoora .rodape-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nexoora .rodape-inferior {
+    flex-direction: column;
+    margin-top: 45px;
+  }
+}
